@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { FaPlane, FaUtensils, FaLightbulb } from "react-icons/fa";
 
-// Map JSON icon names to actual React Icons
 const iconMap = {
   FaPlane: FaPlane,
   FaUtensils: FaUtensils,
@@ -25,7 +24,7 @@ const Features = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {featuresData.map((feature) => {
-          const Icon = iconMap[feature.icon]; // dynamically get the component
+          const Icon = iconMap[feature.icon];
           return (
             <div
               key={feature.id}
