@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Explore Incredible Destinations",
+    "icon": "FaPlane",
+    "description": "Discover hidden gems, off-the-beaten-path destinations, and travel guides that inspire your journeys. From city escapes to nature adventures, get tips and stories that make every trip memorable."
+  },
+  {
+    "id": 2,
+    "title": "Delicious Culinary Experiences",
+    "icon": "FaUtensils",
+    "description": "Explore a world of flavors with recipes, local food spots, and culinary adventures. Learn about traditional dishes, modern twists, and foodie secrets that make every meal a delightful experience."
+  },
+  {
+    "id": 3,
+    "title": "Inspiring Lifestyle Tips",
+    "icon": "FaLightbulb",
+    "description": "Get practical advice, trends, and insights to improve your daily life and well-being. From personal growth to creative ideas, find inspiration to live a healthier, happier, and more balanced life."
+  }
+]
