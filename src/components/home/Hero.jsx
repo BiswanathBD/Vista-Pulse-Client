@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <div className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 grid md:grid-cols-2 items-center justify-between gap-8">
-        <div>
-          <h1 className="text-4xl md:text-6xl font-bold">
+        <div className="py-4">
+          <h1 className="text-4xl md:text-2xl lg:text-6xl font-bold">
             Explore the World, Embrace the Moment
           </h1>
           <p className="mt-4">

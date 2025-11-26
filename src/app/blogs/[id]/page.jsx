@@ -54,7 +54,7 @@ const BlogDetails = () => {
       </div>
 
       {/* Featured Image */}
-      <div className="relative w-full h-96 overflow-hidden mb-6">
+      <div className="relative w-full mb-6">
         <img
           src={blog.image}
           alt={blog.title}

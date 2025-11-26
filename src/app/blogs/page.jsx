@@ -24,7 +24,7 @@ const Blogs = () => {
             className="bg-white shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col p-6 border border-gray-800/5 mb-8"
           >
             {/* Blog Image */}
-            <div className="relative w-full h-64">
+            <div className="w-full h-64">
               <img
                 src={blog.image}
                 alt={blog.title}
@@ -52,8 +52,10 @@ const Blogs = () => {
               </div>
 
               {/* Read More Button */}
-              <Link href={`/blogs/${blog._id}`}>
-                <button className="btn-primary rounded-none! mt-4 bg-gray-800 hover:bg-red-800 text-white -mb-11 w-fit">
+              <Link
+              className="-mb-11! w-fit"
+              href={`/blogs/${blog._id}`}>
+                <button className="btn-primary rounded-none! mt-6 bg-gray-800 hover:bg-red-800 text-white">
                   Read More
                 </button>
               </Link>
