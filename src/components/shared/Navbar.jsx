@@ -54,7 +54,7 @@ const Navbar = () => {
               >
                 <img
                   className="w-10 aspect-square rounded-full border-2 border-gray-200 shadow"
-                  src={user.iamge || defaultProfile}
+                  src={user.photoURL || defaultProfile}
                   alt=""
                 />
                 <FaBars className="absolute bottom-0 bg-gray-800/50 p-0.5 rounded-full text-white text-xs" />
@@ -103,7 +103,7 @@ const Navbar = () => {
                   </Link>
 
                   {/* bottom user section */}
-                  <div className="mt-6 pt-6 lg:mt-0 lg:pt-0 border-t border-gray-800/20 text-sm flex gap-4 items-center">
+                  <div className="mt-6 pt-6 lg:mt-0 lg:pt-0 border-t border-white/10 text-sm flex gap-4 items-center flex-wrap sm:flex-nowrap">
                     <div className="flex-1">
                       <p className="font-semibold">{user?.displayName}</p>
                       <p className="font-light text-xs text-white/50">

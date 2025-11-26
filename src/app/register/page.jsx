@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaEnvelope, FaLock, FaUser } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../../context/AuthContext";
@@ -7,11 +7,18 @@ import { updateProfile } from "firebase/auth";
 import { useRouter } from "next/navigation";
 
 const Register = () => {
-  const { user, passwordSignUp } = useContext(AuthContext);
+  const { user, setUser, passwordSignUp, googleSignIn } =
+    useContext(AuthContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
+
+  useEffect(() => {
+    if (user) {
+      router.push("/");
+    }
+  }, [user, router]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,6 +33,13 @@ const Register = () => {
         });
       })
       .catch((err) => console.error("Error signing up:", err));
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn().then((result) => {
+      setUser(result.user);
+      console.log(result.user);
+    });
   };
 
   return (
@@ -112,7 +126,10 @@ const Register = () => {
         </div>
 
         {/* Google Sign Up */}
-        <button className="w-full flex items-center justify-center gap-2 btn-primary rounded-xl! bg-gray-800/10 hover:bg-gray-800/5 transition py-2">
+        <button
+          onClick={handleGoogleSignIn}
+          className="w-full flex items-center justify-center gap-2 btn-primary rounded-xl! bg-gray-800/10 hover:bg-gray-800/5 transition py-2"
+        >
           <FcGoogle size={24} />
           Continue with Google
         </button>

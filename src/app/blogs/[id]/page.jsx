@@ -38,19 +38,19 @@ const BlogDetails = () => {
       {/* Creator & Date */}
       <div className="flex justify-between items-center">
         <p className="flex items-center gap-2 mb-4">
-        <span>
-          <img
-            className="w-8 aspect-square object-cover rounded-lg"
-            src={blog?.creatorPic || defaultProfile}
-            alt=""
-          />
-        </span>
-        <span className="text-lg font-semibold pr-2 border-r">
-          {blog.creatorName}
-        </span>
-        <span className="text-black/50">{blog.creatorEmail}</span>
-      </p>
-      <p>Date: {new Date(blog.created_at).toLocaleDateString()}</p>
+          <span>
+            <img
+              className="w-8 aspect-square object-cover rounded-lg"
+              src={blog?.authorPhoto || defaultProfile}
+              alt=""
+            />
+          </span>
+          <span className="text-lg font-semibold pr-2 border-r">
+            {blog.authorName}
+          </span>
+          <span className="text-black/50">{blog.authorEmail}</span>
+        </p>
+        <p>Date: {new Date(blog.created_at).toLocaleDateString()}</p>
       </div>
 
       {/* Featured Image */}
@@ -64,7 +64,7 @@ const BlogDetails = () => {
 
       {/* Long Description */}
       <div className="prose prose-lg max-w-none text-gray-700 mb-8">
-        <p>{blog.long_desc}</p>
+        <p>{blog.long_desc || blog.description}</p>
       </div>
 
       {/* Back Button */}

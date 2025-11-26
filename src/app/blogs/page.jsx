@@ -13,6 +13,9 @@ const Blogs = () => {
       .catch((err) => console.error("Error loading blogs", err));
   }, []);
 
+  const noImage =
+    "https://cdn.head-fi.org/assets/classifieds/hf-classifieds_no-image-available_2.jpg";
+
   return (
     <div className="text-gray-900 container mx-auto px-4 sm:px-8 md:px-16 lg:px-32 mt-12">
       <h3 className="text-3xl font-bold text-center mb-8">All Blogs</h3>
@@ -26,7 +29,7 @@ const Blogs = () => {
             {/* Blog Image */}
             <div className="w-full h-64">
               <img
-                src={blog.image}
+                src={blog.image || noImage}
                 alt={blog.title}
                 className="object-cover w-full aspect-3/2"
               />
@@ -52,9 +55,7 @@ const Blogs = () => {
               </div>
 
               {/* Read More Button */}
-              <Link
-              className="-mb-11! w-fit"
-              href={`/blogs/${blog._id}`}>
+              <Link className="-mb-11! w-fit" href={`/blogs/${blog._id}`}>
                 <button className="btn-primary rounded-none! mt-6 bg-gray-800 hover:bg-red-800 text-white">
                   Read More
                 </button>

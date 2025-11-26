@@ -6,7 +6,8 @@ import { AuthContext } from "../../../context/AuthContext";
 import { useRouter } from "next/navigation";
 
 const SignIn = () => {
-  const { user, setUser, passwordSignIn } = useContext(AuthContext);
+  const { user, setUser, passwordSignIn, googleSignIn } =
+    useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
@@ -22,6 +23,13 @@ const SignIn = () => {
     passwordSignIn(email, password).then((result) => {
       setUser(result.user);
       router("/");
+    });
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn().then((result) => {
+      setUser(result.user);
+      console.log(result.user);
     });
   };
 
@@ -98,7 +106,10 @@ const SignIn = () => {
         </div>
 
         {/* Google Sign In */}
-        <button className="w-full flex items-center justify-center gap-2 btn-primary rounded-xl! bg-gray-800/10 hover:bg-gray-800/5 transition">
+        <button
+          onClick={handleGoogleSignIn}
+          className="w-full flex items-center justify-center gap-2 btn-primary rounded-xl! bg-gray-800/10 hover:bg-gray-800/5 transition"
+        >
           <FcGoogle size={24} />
           Continue with Google
         </button>

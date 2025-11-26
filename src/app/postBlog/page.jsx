@@ -15,7 +15,7 @@ const PostBlog = () => {
     image: "",
     title: "",
     description: "",
-    category: "", // NEW
+    category: "",
   });
 
   const handleChange = (e) => {
