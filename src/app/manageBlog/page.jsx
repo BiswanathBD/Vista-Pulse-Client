@@ -17,7 +17,9 @@ const ManageBlog = () => {
 
   useEffect(() => {
     if (!user) return;
-    fetch(`http://localhost:3000/userBlogs?email=${user?.email}`)
+    fetch(
+      `https://vista-pulse-server-site.vercel.app/userBlogs?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setUserBlogs(data))
       .catch((err) => console.error("Error fetching blogs:", err));
@@ -32,7 +34,7 @@ const ManageBlog = () => {
   const handleDelete = (id) => {
     if (!confirm("Are you sure you want to delete this blog?")) return;
 
-    fetch(`http://localhost:3000/blogs/${id}`, {
+    fetch(`https://vista-pulse-server-site.vercel.app/blogs/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

@@ -7,7 +7,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/blogs")
+    fetch("https://vista-pulse-server-site.vercel.app/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((err) => console.error("Error loading blogs", err));
@@ -24,7 +24,7 @@ const Blogs = () => {
         {blogs.map((blog) => (
           <div
             key={blog._id}
-            className="bg-white shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col p-6 border border-gray-800/5 mb-8"
+            className="bg-white shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col border border-gray-800/5 mb-8"
           >
             {/* Blog Image */}
             <div className="w-full h-64">
@@ -36,7 +36,7 @@ const Blogs = () => {
             </div>
 
             {/* Blog Content */}
-            <div className="flex flex-col justify-between flex-1">
+            <div className="flex flex-col justify-between flex-1  p-6">
               <div>
                 {/* Category as button */}
                 <button className="px-3 py-1 pt-1.5 bg-gray-700/20 text-gray-800 text-xs font-semibold rounded-sm mb-4">
@@ -50,7 +50,7 @@ const Blogs = () => {
 
                 {/* Short Description */}
                 <p className="text-gray-600 text-sm mt-2 line-clamp-3">
-                  {blog.short_desc}
+                  {blog.description}
                 </p>
               </div>
 

@@ -12,7 +12,7 @@ const BlogDetails = () => {
     "https://img.freepik.com/free-vector/user-blue-gradient_78370-4692.jpg?semt=ais_hybrid&w=740&q=80";
 
   useEffect(() => {
-    fetch(`http://localhost:3000/blogs/${id}`)
+    fetch(`https://vista-pulse-server-site.vercel.app/blogs/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setBlog(data);

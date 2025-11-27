@@ -15,7 +15,7 @@ const LatestBlogs = () => {
     "https://cdn.head-fi.org/assets/classifieds/hf-classifieds_no-image-available_2.jpg";
 
   useEffect(() => {
-    fetch("http://localhost:3000/latestBlogs?limit=3")
+    fetch("https://vista-pulse-server-site.vercel.app/latestBlogs?limit=3")
       .then((res) => res.json())
       .then((data) => setLatestBlogs(data))
       .catch((err) => console.error("Error loading blogs", err));

@@ -36,7 +36,7 @@ const PostBlog = () => {
       created_at: new Date(),
     };
 
-    fetch("http://localhost:3000/blogs", {
+    fetch("https://vista-pulse-server-site.vercel.app/blogs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
