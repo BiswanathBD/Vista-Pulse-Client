@@ -1,42 +1,90 @@
-# 🌐 VistaPulse — Modern Blogging Platform  
-### Next.js 16 • React 19 • Express.js • MongoDB • Firebase
+🌐 VistaPulse — Modern Blogging Platform
 
-VistaPulse is a modern and responsive full-stack blogging platform where users can create, read, and manage blog posts.  
-It features a clean UI, fast API, Firebase authentication, and MongoDB-backed data storage.
+Live Website: https://vista-pulse-client.vercel.app/
 
-🔗 **Live Website:** https://vista-pulse-client.vercel.app/
+Server Repo: (add link if available)
 
----
+VistaPulse is a modern and responsive blogging platform where users can read, post, search, filter, and manage blogs.
+It is built using Next.js, Firebase Authentication, Tailwind CSS, and a custom backend API.
 
-## ✨ Features
+🚀 Features
+🔐 Authentication
 
-- 📝 Publish & manage blog posts  
-- 🔐 Secure user authentication with Firebase  
-- 📄 Latest blog filtering  
-- 📱 Fully responsive UI  
-- ⚡ Fast REST API built with Express.js  
-- 🗄 MongoDB CRUD operations  
-- ☁ Deployed using Vercel (Client) & Node Server (API)
+Google Sign-In using Firebase Auth
 
----
+Protected routes such as Post Blog & Manage Blogs
 
-## 🛠️ Tech Stack
+Displays user profile, image & email in Navbar dropdown
 
-### **Frontend**
-- Next.js 16  
-- React 19  
-- Firebase  
-- Axios  
-- React Icons  
+📝 Blog System
 
-### **Backend**
-- Node.js  
-- Express.js  
-- MongoDB  
-- CORS  
-- Dotenv  
+Post blogs with:
 
----
+Image URL
 
-## 📁 Project Structure
+Title
 
+Long Description
+
+Category selection
+
+Auto-filled author info (name, email, photo)
+
+View all blogs in a beautiful grid layout
+
+Click Read More to view full details of any blog
+
+Manage your own blogs (View / Delete)
+
+🔎 Smart Search & Filters
+
+Search blogs by title
+
+Filter by category:
+
+Technology
+
+Lifestyle
+
+Travel
+
+Food
+
+Education
+
+Health
+
+Business
+
+Entertainment
+
+💻 Responsive UI
+
+Clean modern UI with Tailwind CSS
+
+Adaptive Navbar with mobile dropdown menu
+
+Smooth hover effects & border styling
+
+Stylish buttons and card layout
+
+🛠️ Tech Stack
+Frontend
+
+Next.js 14 / App Router
+
+React
+
+Tailwind CSS
+
+React Icons
+
+Backend
+
+Custom REST API (Node.js / Express)
+
+Hosted on Vercel Serverless Functions
+
+Authentication
+
+Firebase Authentication (Google Sign-In)
