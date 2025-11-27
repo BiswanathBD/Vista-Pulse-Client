@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌐 VistaPulse — Modern Blogging Platform  
+### Next.js 16 • React 19 • Express.js • MongoDB • Firebase
 
-## Getting Started
+VistaPulse is a modern and responsive full-stack blogging platform where users can create, read, and manage blog posts.  
+It features a clean UI, fast API, Firebase authentication, and MongoDB-backed data storage.
 
-First, run the development server:
+🔗 **Live Website:** https://vista-pulse-client.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [https://vista-pulse-server-site.vercel.app](https://vista-pulse-server-site.vercel.app) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- 📝 Publish & manage blog posts  
+- 🔐 Secure user authentication with Firebase  
+- 📄 Latest blog filtering  
+- 📱 Fully responsive UI  
+- ⚡ Fast REST API built with Express.js  
+- 🗄 MongoDB CRUD operations  
+- ☁ Deployed using Vercel (Client) & Node Server (API)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+### **Frontend**
+- Next.js 16  
+- React 19  
+- Firebase  
+- Axios  
+- React Icons  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **Backend**
+- Node.js  
+- Express.js  
+- MongoDB  
+- CORS  
+- Dotenv  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📁 Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
